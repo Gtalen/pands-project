@@ -111,24 +111,73 @@ sns.boxplot(data=iris, x='species', y='petal_width', ax = ax [1, 1])
 
 plt.show()
 
-# Using pandas groupby to group the dataset by sepcie
-iris_species = iris.groupby('species')
-print(iris_species.count(), file=f)
 
-# Define outlier function
+# Removing the outliers from the boxplot
+fig, ax = plt.subplots(2, 2, figsize = (13, 8))
+fig.suptitle ('Iris Dataset numerical variable Boxplots')
+
+#creating chart for each subplot
+#plot 1: row 1, column 1
+sns.boxplot(data=iris, x='species', y='sepal_length', showfliers=False, ax = ax [0, 0])
+
+#plot 2: row 1, column 2
+sns.boxplot(data=iris, x='species', y='sepal_width', showfliers=False, ax = ax [0, 1])
+
+#plot 3: row 2, column 1
+sns.boxplot(data=iris, x='species', y='petal_length', showfliers=False, ax = ax [1, 0])
+
+#plot 4: row 2, column 2
+sns.boxplot(data=iris, x='species', y='petal_width', showfliers=False, ax = ax [1, 1])
+
+# Interquartile method
+# Finding the Interquartile range by Iris Species
+# Using pandas groupby to group the dataset by species
+iris_species = iris.groupby('species')
+
+#counting each specie
+print(iris_species.count(), file=f) 
+
+# Isolating the species in the dataset
+setosa = iris_species.get_group('setosa')
+versicolor = iris_species.get_group('versicolor')
+virginica = iris_species.get_group('virginica')
+
+# Selecting the numerical columns for each specie
+setosa =iris_species.get_group('setosa').select_dtypes(include=['float64'])
+versicolor =iris_species.get_group('versicolor').select_dtypes(include=['float64'])
+virginica =iris_species.get_group('virginica').select_dtypes(include=['float64'])
+
+# Defining a function to detect outliers by interquartile method
 def IQR_outlier(df):
-    Q1 = df.quantile(0.25)
-    Q3 = df.quantile(0.75)
-    IQR = Q3 - Q1
-    lower_limit = Q1 - 1.5 * IQR
-    upper_limit = Q3 + 1.5 * IQR
+    Q1 = df.quantile(0.25)     # Finding the 25th percentile
+    Q3 = df.quantile(0.75)     # Finding the 75th percentile
+    IQR = Q3 - Q1              # Interquartile range
+    lower_limit = Q1 - 1.5 * IQR   # defining the lower limit of the range
+    upper_limit = Q3 + 1.5 * IQR   # defining the upper limit of the range
     outliers = df[((df<(lower_limit)) | (df>(upper_limit)))]
     return outliers
+   
+# finding outliers in the dataset by species 
+outliers = iris_species.apply(IQR_outlier)
+
+# Dropping rows where all the elements are not a number(NAN)
+species_outliers = outliers.dropna(how='all')  
+species_outliers
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+f.close()
 
 
 
