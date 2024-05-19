@@ -22,7 +22,7 @@ The [Fisher’s Iris dataset](https://archive.ics.uci.edu/dataset/53/iris) conta
 Photocredit: [Awais Naeem](https://www.embedded-robotics.com/iris-dataset-classification/)', width = height = '400/'>
 </div>
 
-Photocredit: Artwork by [Alison Horst](https://editor.analyticsvidhya.com/uploads/96124penguins.png)
+
 
 
 
@@ -53,13 +53,12 @@ import scipy.stats as stats
 
 ### Loading the dataset
 
-Once the prerequisites are installed and dependencies imported, the dataset can be accessed [here](https://raw.githubusercontent.com/mwaskom/seaborn-data/master/penguins.csv).
+The iris dataset was accessed [here]((https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv). ## Loading the dataset
 
 ```
-# Importing the raw data 
+# Importing the raw iris dataset from the web to the variable "iris_data"
 
-palmer_penguins = pd.read_csv("https://raw.githubusercontent.com/mwaskom/seaborn-data/master/penguins.csv")
-palmer_penguins
+iris_data = pd.read_csv('https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv')
 
 ```
 ### Statistical Models
@@ -88,16 +87,15 @@ Basic analysis applied
 
 
  ### Conclusion
-The Palmer penguin dataset was used to demonstrate how raw data can be sourced, explored, manipulated, modelled and visulaized in  order to provide meaningful insights. 
 
 
 ### Contributors
 - Ebelechukwu Chidimma Igwagu
 
-- Eager to contribute? his project is open to external contribution.
+- Eager to contribute? This project is open to external contribution.
 
 ### License
-This project is available under the MIT, GNU license.
+
 
 
 ### References
