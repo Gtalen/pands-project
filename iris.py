@@ -184,14 +184,14 @@ def iris_EDA(iris_output_dir):
     
     
     # f.close()
-    iris_output_dir = r'C:\Users\great\Desktop\pands> cd .\pands-project\\'
+    iris_output_dir = r'C:\Users\great\Desktop\pands\pands-project\Analysis Output\\'
 
 # Opening a text file to append the analysis output
 with open ('irisoutput.txt', 'a') as f:
     original_stdout = sys.stdout  # Save the original standard output
     sys.stdout = f
     try:
-        iris_EDA(r'C:\Users\great\Desktop\pands\pands-project\\') # performs the exploratory data analysis on the iris dataset and prints the output functions
+        iris_EDA(r'C:\Users\great\Desktop\pands\pands-project\Analysis Output\\') # performs the exploratory data analysis on the iris dataset and prints the output functions
     finally:
         # Reset standard output to the original value
         sys.stdout = original_stdout
