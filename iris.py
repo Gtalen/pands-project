@@ -269,8 +269,8 @@ def iris_EDA(iris_output_dir):
 
     # Regression Analysis 
     # Creating a short name for the variables
-    plen = iris['petal_length']
-    pwidth = iris['petal_width']
+    plen = iris['petal_length'].to_numpy()
+    pwidth = iris['petal_width'].to_numpy()
         
      #calculating the correlation coefficient
     plen_pwidth_corr  = iris['petal_length'].corr(iris['petal_width'])
@@ -293,11 +293,11 @@ def iris_EDA(iris_output_dir):
     # Plot the best fit line
      # creating the scatterplot of petal length and petal width
     fig, ax = plt.subplots(figsize = (13, 8))
-    sns.scatterplot(data=iris, x='petal_length', y='petal_width', hue='species', ax = ax)
+    ax.plot(plen, pwidth, 'x')
     plt.title('Scatterplot of Iris Petal Length and Petal Width')
 
-     #ax.plot(plen_values, pwidth_values, color='black')
-    plt.savefig('Heatmap of the Iris dataset.png') # Saving the plot
+    ax.plot(plen_values, pwidth_values, color='black')
+    plt.savefig('Scatterplot of Iris Petal Length and Petal Width.png') # Saving the plot
     plt.close()   # Closing the plot
 
     # Additional plots
@@ -306,6 +306,7 @@ def iris_EDA(iris_output_dir):
     plt.title('Relationship between iris petal length and petal width')
     plt.savefig('Corr and Reg analysis on the iris petal length and petal width.png') # Saving the plot
     plt.close()   # Closing the plot
+
 
     fig, ax = plt.subplots(2, 2, figsize = (15, 8))
     fig.suptitle ('Iris datset Dataset violin plots by species')
@@ -328,6 +329,5 @@ with open ('irisoutput.txt', 'w') as f:
         # Reset standard output to the original value
         sys.stdout = original_stdout
 
-#f = open('irisoutput.txt', 'a')
-print ('Iri Exploratory Data Analysis is all done!')  # To confirm that the program ran
+print ('Iris Exploratory Data Analysis is all done!')  # To confirm that the program ran
     
