@@ -91,9 +91,9 @@ def iris_EDA(iris_output_dir):
     plt.savefig('Histograms of num var by specie.png')
     plt.close()   # Closing the plot
     
-    # Plotting a swarm[plot by species]
+    # Plotting a strip[plot by species]
     fig, ax = plt.subplots(2, 2, figsize = (15, 15))
-    fig.suptitle ('Iris Dataset swarm plots by species')
+    fig.suptitle ('Iris Dataset stripplots by species')
     
     #creating chart for each subplot
     sns.stripplot(data=iris_data, y='sepal_length', x ='species', hue ='species', ax = ax [0, 0])
@@ -267,25 +267,17 @@ def iris_EDA(iris_output_dir):
     strong_corr =iris_numeric_corr[abs(iris_numeric_corr) >= 0.7]   
     print ((f'The iris dataets variables with strong correlations are : \n {strong_corr}'), file=f)
 
-    # Regression Analysis
+    # Regression Analysis 
     # Creating a short name for the variables
     plen = iris['petal_length']
     pwidth = iris['petal_width']
-    plen = iris['sepal_length']
-    swidth = iris['sepal_width']
-    
-
-    # creating the scatterplot of petal length and petal width
-    sns.scatterplot(data=iris, x='petal_length', y='petal_width', hue='species')
-    
-    plt.title ('Scatterplot of iris petal length and petal width')
-    plt.savefig('Scatterplot of iris petal length and petal width.png') # Saving the plot
-    plt.close()   # Closing the plot
-   
-    #calculating the correlation coefficient
+        
+     #calculating the correlation coefficient
     plen_pwidth_corr  = iris['petal_length'].corr(iris['petal_width'])
     print ((f'The iris correlation coefficient of the petal length and width is {plen_pwidth_corr}.'), file=f)
-    
+    #plt.savefig('Heatmap of the Iris dataset.png') # Saving the plot
+    #plt.close()   # Closing the plot
+
     # calculating the slope(m) and intercept (c)
     m, c = np.polyfit(plen, pwidth, deg=1) # deg = 1 for lin reg
     
@@ -298,9 +290,15 @@ def iris_EDA(iris_output_dir):
     # generating the corresponding values for the petal width
     pwidth_values = m * plen_values + c
     
-    # plotting the best fit line for bodymass vs flipper length
-    plt.plot(plen_values, pwidth_values, color='black')
+    # Plot the best fit line
+     # creating the scatterplot of petal length and petal width
+    fig, ax = plt.subplots(figsize = (13, 8))
+    sns.scatterplot(data=iris, x='petal_length', y='petal_width', hue='species', ax = ax)
+    plt.title('Scatterplot of Iris Petal Length and Petal Width')
 
+     #ax.plot(plen_values, pwidth_values, color='black')
+    plt.savefig('Heatmap of the Iris dataset.png') # Saving the plot
+    plt.close()   # Closing the plot
 
     # Additional plots
     # Regression pairplot
@@ -321,7 +319,7 @@ def iris_EDA(iris_output_dir):
     plt.close()   # Closing the plot
 
 # Opening a text file to append the analysis output
-with open ('irisoutput.txt', 'a') as f:
+with open ('irisoutput.txt', 'w') as f:
     original_stdout = sys.stdout  # Save the original standard output
     sys.stdout = f
     try:
@@ -331,5 +329,5 @@ with open ('irisoutput.txt', 'a') as f:
         sys.stdout = original_stdout
 
 #f = open('irisoutput.txt', 'a')
-print ('EDA, all done!')  # To confirm that the program ran
+print ('Iri Exploratory Data Analysis is all done!')  # To confirm that the program ran
     
