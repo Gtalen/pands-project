@@ -43,8 +43,10 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-import scipy.stats as stats
+import warnings    # importing python warning module
+sns.set_theme()            #setting seaborn as default style for plots when using matplotlib
 ```
+
 ### Loading the dataset
 
 The iris dataset was accessed [here]((https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv). 
@@ -57,43 +59,38 @@ iris_data = pd.read_csv('https://raw.githubusercontent.com/mwaskom/seaborn-data/
 ```
 ### The [Iris](https://github.com/Gtalen/pands-project/blob/main/iris.py) python Script
 This script was used to perform an exploratory data analysis (EDA) on the iris dataset. A summary of the script's function is given below;
-- Imports the necessary libraries
-- Defines a function for performing EDA "iris_EDA"
-- Assigns an output directory for the function
-- Loads the dataset
-- Performs a basic data exploration; Data shape, structure, types and descriptive statictics
-- Data Integrity check
-- Data Manipulation
-- Data Visualization
-- Statistical testing
-- Saves all the analysis output and plots to the [Analysis Output](https://github.com/Gtalen/pands-project/tree/main/Analysis%20Output).
+
+1. Imports the necessary libraries needed for EDA
+2. Defines a function for performing EDA called "iris_EDA"
+     - Assigns an output directory to the function were the analysis output was saved
+     - Loads the dataset
+     - Performs a basic data exploration; Data shape, structure, types and descriptive statictics
+     - Data Integrity check and data maipulation; Missing values, duplicates, outliers
+     - Data Visualization: Countplot, Histograms, Boxplot, striplot, violin plot 
+     - Data Analysis:  Descriptive statictics, univariate and bivariate analysis
+     - Statistical testing: Correlation and regression analysis: Correlation coefficient and Heatmap.
+3. Used the python system standout module to direct and save all the analysis output and plots to the [Analysis Output folder](https://github.com/Gtalen/pands-project/tree/main/Analysis%20Output).
+
+### Results
+- [Iris dataset Analysis Summary](https://github.com/Gtalen/pands-project/blob/main/iris.py)
+- [Countplot of the Iris species](https://github.com/Gtalen/pands-project/blob/main/Analysis%20Output/Countplot%20of%20the%20Iris%20species.png)
+-[Histogram of the iris numeric dataset](https://github.com/Gtalen/pands-project/blob/main/Analysis%20Output/Histograms%20of%20num%20var.png)
+-[Histogram of the iris numeric dataset by specie](https://github.com/Gtalen/pands-project/blob/main/Analysis%20Output/Histograms%20of%20num%20var%20by%20specie.png)
+- [Stripplot of the iris  datasets by specie](https://github.com/Gtalen/pands-project/blob/main/Analysis%20Output/Stripplot%20by%20Iris%20species.png)
+- [Boxplot with outliers](https://github.com/Gtalen/pands-project/blob/main/Analysis%20Output/Boxplot%20Iris%20outliers.png)
+- [Boxplot without outliers](https://github.com/Gtalen/pands-project/blob/main/Analysis%20Output/Boxplot%20Iris%20-%20no%20outliers.png)
+- [Pairplot of the relation between the numeric variables](https://github.com/Gtalen/pands-project/blob/main/Analysis%20Output/Pairplot%20of%20the%20Iris%20dataset.png)
+- [Heatmap - Correaltion analysis](https://github.com/Gtalen/pands-project/blob/main/Analysis%20Output/Heatmap%20of%20the%20Iris%20dataset.png)
+- [Scatterplot: Correlation and Regression: Petal length vs petal width]
+- [Correlation and Regression: Petal length vs petal width](https://github.com/Gtalen/pands-project/blob/main/Analysis%20Output/Corr%20and%20Reg%20analysis%20on%20the%20iris%20petal%20length%20and%20petal%20width.png)
+- [Swarmplots by iris species]()
+- [Violinplots by iris species]()
 
 
-- 
-### Statistical Models
-Follow along with the project and you will be able to test all of the models;
 
-1 **Descriptivee statistics**
-- Barcharts
-- Histograms 
-- Boxplot:
 
-2 **Correlation Analysis**  
--  Scatterplots
-- Heatmap correlation matrix
-- Pairplots
 
-3 **Regression Analysis
-
-### Analysis Steps 
-Basic analysis applied
-
-- Data Exploration
-- Data Manipulation
-- Data Visualization
-- Statistical testing
-- Data findings 
-
+### Discussion
 
  ### Conclusion
 
@@ -121,4 +118,6 @@ Basic analysis applied
 - https://seaborn.pydata.org/generated/seaborn.kdeplot.html
 - https://medium.com/analytics-vidhya/exploratory-data-analysis-iris-dataset-4df6f045cda
 - https://careerfoundry.com/en/blog/data-analytics/what-is-an-outlier/
--https://neuraldatascience.io/5-eda/data_cleaning.html
+- https://neuraldatascience.io/5-eda/data_cleaning.html
+- https://stackoverflow.com/questions/36571560/directing-print-output-to-a-txt-file#:~:text=You%20can%20redirect%20stdout%20into%20a,file%20%22output.txt%22%3A%20import%20sys%20sys.stdout%20%3D%20open%28%27output.txt%27%2C%27wt%27%29
+- https://www.geeksforgeeks.org/ways-to-save-python-terminal-output-to-a-text-file/

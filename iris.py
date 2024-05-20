@@ -279,6 +279,8 @@ def iris_EDA(iris_output_dir):
     sns.scatterplot(data=iris, x='petal_length', y='petal_width', hue='species')
     
     plt.title ('Scatterplot of iris petal length and petal width')
+    plt.savefig('Scatterplot of iris petal length and petal width.png') # Saving the plot
+    plt.close()   # Closing the plot
    
     #calculating the correlation coefficient
     plen_pwidth_corr  = iris['petal_length'].corr(iris['petal_width'])
