@@ -14,7 +14,7 @@ This repository contains my analysis of the [Fisher’s Iris dataset](https://ar
 The [Fisher’s Iris dataset](https://archive.ics.uci.edu/dataset/53/iris) contains measured attributes on 3 different species of iris flower. Every row represents an instance of an iris plant. The dataset is made of 150 rows of 50 species each of setosa, versicolor, and virginica iris flower. The petal length, petal width, sepal length and sepal width of the iris flowers  were the measured attributes. All measurements were in centimeters. The credit for the original data source was attributed to [Edgar Anderson](https://en.wikipedia.org/wiki/Edgar_Anderson).
 
 ![Iris](https://github.com/Gtalen/pands-mywork/blob/main/project/iris%20image.png)
-#### Photocredit[Gadictos](https://uk.images.search.yahoo.com/images/view;_ylt=AwrhcfE8m0tmp2wHnklNBQx.;_ylu=c2VjA3NyBHNsawNpbWcEb2lkAzUwNTU3N2I2ODVkZmI0Y2U0M2ZmNWQ2MmNjMTg3ZTA5BGdwb3MDNgRpdANiaW5n?back=https%3A%2F%2Fuk.images.search.yahoo.com%2Fsearch%2Fimages%3Fp%3Dfree%2Bimage%2Bof%2Bthe%2Biris%2Bdataset%2Bdownload%26fr%3Dmcafee%26tab%3Dorganic%26ri%3D6&w=1275&h=477&imgurl=gadictos.com%2Fwp-content%2Fuploads%2F2019%2F03%2Firis-machinelearning.png&rurl=http%3A%2F%2Fgadictos.com%2Firis-data-classification-using-neural-net%2F&size=276.7KB&p=free+image+of+the+iris+dataset+download&oid=505577b685dfb4ce43ff5d62cc187e09&fr2=&fr=mcafee&tt=IRIS+Data+Classification+Using+Neural+Net+%E2%80%93+Gadictos&b=0&ni=200&no=6&ts=&tab=organic&sigr=2UyT0.qAJHkW&sigb=nyy0UGkhtJcf&sigi=nQ6an6hmZbAc&sigt=cNt4DOVHZltW&.crumb=K.SUh56FdNo&fr=mcafee)
+#### Photocredit [Gadictos](https://uk.images.search.yahoo.com/images/view;_ylt=AwrhcfE8m0tmp2wHnklNBQx.;_ylu=c2VjA3NyBHNsawNpbWcEb2lkAzUwNTU3N2I2ODVkZmI0Y2U0M2ZmNWQ2MmNjMTg3ZTA5BGdwb3MDNgRpdANiaW5n?back=https%3A%2F%2Fuk.images.search.yahoo.com%2Fsearch%2Fimages%3Fp%3Dfree%2Bimage%2Bof%2Bthe%2Biris%2Bdataset%2Bdownload%26fr%3Dmcafee%26tab%3Dorganic%26ri%3D6&w=1275&h=477&imgurl=gadictos.com%2Fwp-content%2Fuploads%2F2019%2F03%2Firis-machinelearning.png&rurl=http%3A%2F%2Fgadictos.com%2Firis-data-classification-using-neural-net%2F&size=276.7KB&p=free+image+of+the+iris+dataset+download&oid=505577b685dfb4ce43ff5d62cc187e09&fr2=&fr=mcafee&tt=IRIS+Data+Classification+Using+Neural+Net+%E2%80%93+Gadictos&b=0&ni=200&no=6&ts=&tab=organic&sigr=2UyT0.qAJHkW&sigb=nyy0UGkhtJcf&sigi=nQ6an6hmZbAc&sigt=cNt4DOVHZltW&.crumb=K.SUh56FdNo&fr=mcafee)
 
 
 
@@ -31,7 +31,7 @@ The [Fisher’s Iris dataset](https://archive.ics.uci.edu/dataset/53/iris) conta
 ### Prerequisites
 
 
-The libraries used for this project were Pandas, Numpy, matplotlib_pyplot, Seaborn and Sciplot.stats. These packages can be accessed via the Anaconda package. Aadditional requirements can be installed using pip install. 
+The libraries used for this project were Pandas, Numpy, matplotlib_pyplot, Seaborn. These packages can be accessed via the Anaconda package. Aadditional requirements can be installed using pip install. The python system standout module was used for output file mmanagement.
 
 #### Importing the requirements
 ```
@@ -39,7 +39,8 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-import warnings    # importing python warning module
+import warnings   
+import sys
 sns.set_theme()            #setting seaborn as default style for plots when using matplotlib
 ```
 
@@ -53,8 +54,8 @@ The iris dataset was accessed [here]((https://raw.githubusercontent.com/mwaskom/
 iris_data = pd.read_csv('https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv')
 
 ```
-### The [Iris](https://github.com/Gtalen/pands-project/blob/main/iris.py) python Script
-This script was used to perform an exploratory data analysis (EDA) on the iris dataset. A summary of the script's function is given below;
+### The Iris Python Script ([Iris.py](https://github.com/Gtalen/pands-project/blob/main/iris.py))
+This script was used to perform an exploratory data analysis (EDA) on the iris dataset. A summary of the script's functionality is given below;
 
 1. Imports the necessary libraries needed for EDA
 2. Defines a function for performing EDA called "iris_EDA"
@@ -65,13 +66,17 @@ This script was used to perform an exploratory data analysis (EDA) on the iris d
      - Data Visualization: Countplot, Histograms, Boxplot, striplot, violin plot 
      - Data Analysis:  Descriptive statictics, univariate and bivariate analysis
      - Statistical testing: Correlation and regression analysis: Correlation coefficient and Heatmap.
-3. Used the python system standout module to direct and save all the analysis output and plots to the [Analysis Output folder](https://github.com/Gtalen/pands-project/tree/main/Analysis%20Output).
+3. The python system standout module was used to direct and save all the analysis output and plots to the [Analysis Output folder](https://github.com/Gtalen/pands-project/tree/main/Analysis%20Output).
 
-### Results
+### Output Files
+
 - [Iris dataset Analysis Summary](https://github.com/Gtalen/pands-project/blob/main/iris.py)
 - [Countplot of the Iris species](https://github.com/Gtalen/pands-project/blob/main/Analysis%20Output/Countplot%20of%20the%20Iris%20species.png).
+
 -[Histogram of the iris numeric dataset](https://github.com/Gtalen/pands-project/blob/main/Analysis%20Output/Histograms%20of%20num%20var.png).
+
 -[Histogram of the iris numeric dataset by specie](https://github.com/Gtalen/pands-project/blob/main/Analysis%20Output/Histograms%20of%20num%20var%20by%20specie.png).
+
 - [Stripplot of the iris  datasets by specie](https://github.com/Gtalen/pands-project/blob/main/Analysis%20Output/Stripplot%20by%20Iris%20species.png)
 - [Boxplot with outliers](https://github.com/Gtalen/pands-project/blob/main/Analysis%20Output/Boxplot%20Iris%20outliers.png)
 - [Boxplot without outliers](https://github.com/Gtalen/pands-project/blob/main/Analysis%20Output/Boxplot%20Iris%20-%20no%20outliers.png)
