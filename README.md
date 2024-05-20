@@ -13,6 +13,8 @@ This repository contains my analysis of the [Fisher’s Iris dataset](https://ar
 ### Overview
 The [Fisher’s Iris dataset](https://archive.ics.uci.edu/dataset/53/iris) contains measured attributes on 3 different species of iris flower. Every row represents an instance of an iris plant. The dataset is made of 150 rows of 50 species each of setosa, versicolor, and virginica iris flower. The petal length, petal width, sepal length and sepal width of the iris flowers  were the measured attributes. All measurements were in centimeters. The credit for the original data source was attributed to [Edgar Anderson](https://en.wikipedia.org/wiki/Edgar_Anderson).
 
+![Iris](https://github.com/Gtalen/pands-mywork/blob/main/project/iris%20image.png)
+
 
 <div>
 <img src = '<div>
