@@ -130,13 +130,13 @@ A copy of the dataset was created before any data manipulations was done as to p
 ### Outlier Mining
 An outlier is a value that differs significantly from the rest of the dataset. The interquartile method was used to detect within-species outliers in the iris dataset and these were visualized with a Boxplot. In the boxplot, observations outside the whiskers are the outliers. Outliers using the interquartile method are data points that are 1.5 times the interquartile range ([Aaron Newman](https://neuraldatascience.io/5-eda/data_cleaning.html)).
 
-#### Outlier Summary
-
-The IQR method identified a total of thirteen outliers in the dataset across all three species. Eight of these were from the iris setosa, five from iris virginica and and one from iris versicolor. The sepal length and sepal width had the highest number of outliers of five each, two from the petal width and one from the petal length. Non outliers were represented as not a number. The outliere were not dropped due to the small sample size. Another approach would have been utilizing either the imputation or winsorizing method as described [here](https://neuraldatascience.io/5-eda/data_cleaning.html)  though not done in this analysis. The outliers were visualized using a boxplot.
 
 ##### Figure 2: Iris Dataset Boxplot with outliers
 ![Boxplot with outliers](https://github.com/Gtalen/pands-project/blob/main/Analysis%20Output/Boxplot%20Iris%20outliers.png)
 
+#### Outlier Summary
+
+The IQR method identified a total of thirteen outliers in the dataset across all three species. Eight of these were from the iris setosa, five from iris virginica and and one from iris versicolor. The sepal length and sepal width had the highest number of outliers of five each, two from the petal width and one from the petal length. Non outliers were represented as not a number. The outliere were not dropped due to the small sample size. Another approach would have been utilizing either the imputation or winsorizing method as described [here](https://neuraldatascience.io/5-eda/data_cleaning.html)  though not done in this analysis. The outliers were visualized using a boxplot.
 The outliers were removed from the boxplot only and not from the dataset by using the seaborn library 
 
 ##### Figure 3: Iris Dataset Boxplot without outliers
@@ -186,7 +186,7 @@ The linear relationship between the iris petal length and petal depth was analys
  - There was equal distribution of the sample size across the 3 species of iris flower in the dataset
  - The dataset has no missing values and a single duplicate row
  - The iris dataset is normally distributed
- - A total of 13 outliers were identified in the datset, 8 of which were setosa, 4 - virginica and one versicolor
+ - A total of 13 outliers were identified in the datset, eight of which were setosa, four virginica and one versicolor
  - The measured attributes can be used for classification of iris flowers
  - Iris setosa can be easily classified using the short petal length and petal width
  - Despite the overlap between the iris versicolor and virginica, the later's long sepal length and sepal width can be useful for identification purposes.
@@ -202,6 +202,7 @@ The linear relationship between the iris petal length and petal depth was analys
 
 ### License
 
+This project is available under the MIT, GNU license.
 
 
 ### Sources
@@ -239,4 +240,3 @@ The linear relationship between the iris petal length and petal depth was analys
 - Valcheva, S. (2024) Statistical Methods for Data Analysis: a Comprehensive Guide. https://www.intellspot.com/statistical-methods/.
 - Wikipedia contributors (2024) Iris flower data set. https://en.wikipedia.org/wiki/Iris_flower_data_set.
 
-### Referenced Sources
