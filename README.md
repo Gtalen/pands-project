@@ -72,8 +72,8 @@ This script was used to perform an exploratory data analysis (EDA) on the iris d
 
 - [Iris dataset Analysis Summary](https://github.com/Gtalen/pands-project/blob/main/iris.py)
 - [Countplot of the Iris species](https://github.com/Gtalen/pands-project/blob/main/Analysis%20Output/Countplot%20of%20the%20Iris%20species.png)
-- [Histogram of the iris numeric dataset](https://github.com/Gtalen/pands-project/blob/main/Analysis%20Output/Histograms%20of%20num%20var.png)
-- [Histogram of the iris numeric dataset by specie](https://github.com/Gtalen/pands-project/blob/main/Analysis%20Output/Histograms%20of%20num%20var%20by%20specie.png)
+- [Histogram of the iris numeric variables](https://github.com/Gtalen/pands-project/blob/main/Analysis%20Output/Histograms%20of%20num%20var.png)
+- [Histogram of the iris numeric variables by specie](https://github.com/Gtalen/pands-project/blob/main/Analysis%20Output/Histograms%20of%20num%20var%20by%20specie.png)
 - [Stripplot of the iris  datasets by specie](https://github.com/Gtalen/pands-project/blob/main/Analysis%20Output/Stripplot%20by%20Iris%20species.png)
 - [Boxplot with outliers](https://github.com/Gtalen/pands-project/blob/main/Analysis%20Output/Boxplot%20Iris%20outliers.png)
 - [Boxplot without outliers](https://github.com/Gtalen/pands-project/blob/main/Analysis%20Output/Boxplot%20Iris%20-%20no%20outliers.png)
@@ -84,20 +84,28 @@ This script was used to perform an exploratory data analysis (EDA) on the iris d
 - [Violinplots by iris species](https://github.com/Gtalen/pands-project/blob/main/Analysis%20Output/Iris%20datset%20Dataset%20violin%20plots%20by%20species.png)
 
 ## Discussion
-This project utilised python funtions and modules alongside  other prerequisite libraries in analysing the iris dataset.
+This project utilised python funtions and modules alongside  other prerequisite libraries in performing an exploratory data analysis the iris dataset.
 
 ### Data Exploration
+
  Data eexploration involved using the data head and tail functions to get a quick overview of the first and last five rows in the dataset respectively. Descriptive statistics was used to summarize the data.
 
-#### Table 1: ![Iris Dataset Descriptives](https://github.com/Gtalen/pands-mywork/blob/main/data-analytics-mywork/Iris%20Descriptive%20Summary%20table.png)
+#### Table 1: Iris Dataset Summary Statistics
 
-#### Figure-1 Countplot of the Categorical Variales
+![Iris Dataset Descriptives](https://github.com/Gtalen/pands-mywork/blob/main/data-analytics-mywork/Iris%20Descriptive%20Summary%20table.png)
+
+#### Figure-1 Countplot of the Iris Species
+
 ![Countplot of the Iris species](https://github.com/Gtalen/pands-project/blob/main/Analysis%20Output/Countplot%20of%20the%20Iris%20species.png).
 
-### Data Structure
-There are four float (numeric) data type variables and one object (categorical) type.  None of all the 150 measured variables in the datset are of the non null type. There are 50 instances each for the setosa, versicolor and virginica.
+The countplot showed that the iris dataset contains 50 species each of the iris setosa, iris virginica and iris versicolor.
 
-#### Table 2
+### Data Structure
+
+The iris dataset has four float type (numeric) and one object type (categorical) type variables.  None of all the 150 measured instances in the dataset are of the non null type. 
+
+#### Table 2 - Iris Datset Data Structure
+![iris info](https://github.com/Gtalen/pands-mywork/blob/main/data-analytics-mywork/Iris%20data%20types.png)
 
 ### Univariate Analysis
 
