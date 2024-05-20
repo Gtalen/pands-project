@@ -14,15 +14,9 @@ This repository contains my analysis of the [Fisher’s Iris dataset](https://ar
 The [Fisher’s Iris dataset](https://archive.ics.uci.edu/dataset/53/iris) contains measured attributes on 3 different species of iris flower. Every row represents an instance of an iris plant. The dataset is made of 150 rows of 50 species each of setosa, versicolor, and virginica iris flower. The petal length, petal width, sepal length and sepal width of the iris flowers  were the measured attributes. All measurements were in centimeters. The credit for the original data source was attributed to [Edgar Anderson](https://en.wikipedia.org/wiki/Edgar_Anderson).
 
 ![Iris](https://github.com/Gtalen/pands-mywork/blob/main/project/iris%20image.png)
+#### Photocredit[Gadictos](https://uk.images.search.yahoo.com/images/view;_ylt=AwrhcfE8m0tmp2wHnklNBQx.;_ylu=c2VjA3NyBHNsawNpbWcEb2lkAzUwNTU3N2I2ODVkZmI0Y2U0M2ZmNWQ2MmNjMTg3ZTA5BGdwb3MDNgRpdANiaW5n?back=https%3A%2F%2Fuk.images.search.yahoo.com%2Fsearch%2Fimages%3Fp%3Dfree%2Bimage%2Bof%2Bthe%2Biris%2Bdataset%2Bdownload%26fr%3Dmcafee%26tab%3Dorganic%26ri%3D6&w=1275&h=477&imgurl=gadictos.com%2Fwp-content%2Fuploads%2F2019%2F03%2Firis-machinelearning.png&rurl=http%3A%2F%2Fgadictos.com%2Firis-data-classification-using-neural-net%2F&size=276.7KB&p=free+image+of+the+iris+dataset+download&oid=505577b685dfb4ce43ff5d62cc187e09&fr2=&fr=mcafee&tt=IRIS+Data+Classification+Using+Neural+Net+%E2%80%93+Gadictos&b=0&ni=200&no=6&ts=&tab=organic&sigr=2UyT0.qAJHkW&sigb=nyy0UGkhtJcf&sigi=nQ6an6hmZbAc&sigt=cNt4DOVHZltW&.crumb=K.SUh56FdNo&fr=mcafee)
 
 
-<div>
-<img src = '<div>
-<img src = 'https://uk.images.search.yahoo.com/images/view;_ylt=AwrNah4_HEpmbEUDQ9VNBQx.;_ylu=c2VjA3NyBHNsawNpbWcEb2lkA2E4MGEwMDI1ZTdmOTE3ZWI2NjY2OTk5NzdmZjc3OTgwBGdwb3MDMwRpdANiaW5n?back=https%3A%2F%2Fuk.images.search.yahoo.com%2Fsearch%2Fimages%3Fp%3Dthe%2Biris%2Bdataset%26fr%3Dmcafee%26tab%3Dorganic%26ri%3D3&w=1400&h=502&imgurl=www.embedded-robotics.com%2Fwp-content%2Fuploads%2F2022%2F01%2FIris-Dataset-Classification.png&rurl=https%3A%2F%2Fwww.embedded-robotics.com%2Firis-dataset-classification%2F&size=309.3KB&p=the+iris+dataset&oid=a80a0025e7f917eb666699977ff77980&fr2=&fr=mcafee&tt=Iris+Dataset+Classification+Using+3+Machine+Learning+Algos&b=0&ni=200&no=3&ts=&tab=organic&sigr=xNARYprdCeLI&sigb=X.01Pn0Fmz1x&sigi=IUOeD5VBGqEU&sigt=sPgH93UVv7c6&.crumb=K.SUh56FdNo&fr=mcafee', width = height = '400/'>
-</div>
-
-Photocredit: [Awais Naeem](https://www.embedded-robotics.com/iris-dataset-classification/)', width = height = '400/'>
-</div>
 
 ### Installation
 
