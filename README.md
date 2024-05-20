@@ -8,10 +8,10 @@
 
 ### Project Description
 
-This repository contains my analysis of the [Fisher’s Iris dataset](https://archive.ics.uci.edu/dataset/53/iris).  This project demonstrated the use of python programs and scripts in analysing data to provide meaningful insights. All analysis was performed with the Anaconda (Python 3.11.5) interpreter.
+This repository contains my analysis of the [Fisher’s Iris dataset](https://archive.ics.uci.edu/dataset/53/iris).  This project demonstrated the use of python programs and scripts in analysing data to provide meaningful insights. All analysis was performed with the Anaconda (Python 3.11.5) interpreter. The project comprises an [iris.py](https://github.com/Gtalen/pands-project/blob/main/iris.py) script, [iris.ipynb](https://github.com/Gtalen/pands-project/blob/main/iris.ipynb) notebook and [Analysis Output](https://github.com/Gtalen/pands-project/tree/main/Analysis%20Output).
 
 ### Overview
-The [Fisher’s Iris dataset](https://archive.ics.uci.edu/dataset/53/iris) contains measured attributes on 33 different species of iris flower. Every row represents an instance of an iris plant. The dataset is made of 150 rows comprising 50 species each of setosa, versicolor, and virginica iris flower. The measured attributes in centimeters were petal length, petal width, sepal length and sepal width. The credit for the original data source was attributed to [Edgar Anderson](https://en.wikipedia.org/wiki/Edgar_Anderson).
+The [Fisher’s Iris dataset](https://archive.ics.uci.edu/dataset/53/iris) contains measured attributes on 3 different species of iris flower. Every row represents an instance of an iris plant. The dataset is made of 150 rows of 50 species each of setosa, versicolor, and virginica iris flower. The measured attributes in centimeters were petal length, petal width, sepal length and sepal width. The credit for the original data source was attributed to [Edgar Anderson](https://en.wikipedia.org/wiki/Edgar_Anderson).
 
 
 <div>
@@ -22,13 +22,7 @@ The [Fisher’s Iris dataset](https://archive.ics.uci.edu/dataset/53/iris) conta
 Photocredit: [Awais Naeem](https://www.embedded-robotics.com/iris-dataset-classification/)', width = height = '400/'>
 </div>
 
-
-
-
-
-
 ### Installation
-- Clone the URL [here](https://github.com/Gtalen/data-analytics.git).
 
 ```
 - Install Anaconda python Interpreter
@@ -38,11 +32,12 @@ Photocredit: [Awais Naeem](https://www.embedded-robotics.com/iris-dataset-classi
 ```
 ### USAGE
 
-### Libraries/Prerequisites
+### Prerequisites
 
 
-The libraries used for this project Pandas, Numpy, matplotlib_pyplot, Seaborn and Sciplot.stats and these packages are available on the Anaconda installation package. Any additional package can be installed using pip install. Pandas was used for exploring the dataframe, Numpy - numerical arrays was utilized for data analysis while Matplotlib and seaborn was used for plotting data. These can be imported into the jupyter notebook with the command below;
+The libraries used for this project were Pandas, Numpy, matplotlib_pyplot, Seaborn and Sciplot.stats. These packages can be accessed via the Anaconda package. Aadditional requirements can be installed using pip install. 
 
+#### Importing the requirements
 ```
 import pandas as pd
 import numpy as np
@@ -50,17 +45,31 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import scipy.stats as stats
 ```
-
 ### Loading the dataset
 
-The iris dataset was accessed [here]((https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv). ## Loading the dataset
+The iris dataset was accessed [here]((https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv). 
 
 ```
-# Importing the raw iris dataset from the web to the variable "iris_data"
+# Importing the raw iris dataset
 
 iris_data = pd.read_csv('https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv')
 
 ```
+### The [Iris](https://github.com/Gtalen/pands-project/blob/main/iris.py) python Script
+This script was used to perform an exploratory data analysis (EDA) on the iris dataset. A summary of the script's function is given below;
+- Imports the necessary libraries
+- Defines a function for performing EDA "iris_EDA"
+- Assigns an output directory for the function
+- Loads the dataset
+- Performs a basic data exploration; Data shape, structure, types and descriptive statictics
+- Data Integrity check
+- Data Manipulation
+- Data Visualization
+- Statistical testing
+- Saves all the analysis output and plots to the [Analysis Output](https://github.com/Gtalen/pands-project/tree/main/Analysis%20Output).
+
+
+- 
 ### Statistical Models
 Follow along with the project and you will be able to test all of the models;
 
@@ -108,3 +117,8 @@ Basic analysis applied
 - https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/
 - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.select_dtypes.html
 - https://en.wikipedia.org/wiki/Iris_flower_data_set
+- https://www.analyticsvidhya.com/blog/2020/07/univariate-analysis-visualization-with-illustrations-in-python/
+- https://seaborn.pydata.org/generated/seaborn.kdeplot.html
+- https://medium.com/analytics-vidhya/exploratory-data-analysis-iris-dataset-4df6f045cda
+- https://careerfoundry.com/en/blog/data-analytics/what-is-an-outlier/
+-https://neuraldatascience.io/5-eda/data_cleaning.html
